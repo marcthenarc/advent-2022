@@ -95,7 +95,7 @@ void extractRows(std::ifstream& ifs, int step)
 		{
 			extractCrates(line, crates);
 		}
-		// m indicate a move command.  Depending on the step, the command will be extracted - insert as is or copied in block to
+		// m indicates a move command.  Depending on the step, the command will be extracted - insert as is or copied in block to
 		// the beginning of the stack.
 		else if (line.find("m") != std::string::npos)
 		{
@@ -104,7 +104,7 @@ void extractRows(std::ifstream& ifs, int step)
 			else
 				extractOrders2(line, stacks);
 		}
-		// A non-empty line indicate the grid line.  That were we pull out the number of stacks
+		// A non-empty line indicates the grid line.  That were we pull out the number of stacks
 		// and swap the horizontal crates to vertical stacks.
 		else if (!line.empty())
 		{
